@@ -49,10 +49,6 @@ int main(void) {
     printf("insert function number which you want to do (1-4):\n1 - sum\n2 - difference\n3 - multiplication\n4 - separation\n");
     scanf("%d", &a);
 
-    while (a < 1 || a > 4) {
-        printf("Incorrect choice. Try again. insert function number which you want to do (1-4):\n1 - sum\n2 - difference\n3 - multiplication\n4 - separation\n");
-        scanf("%d", &a);
-    }
     if (a == 1) {
         printf("Using sum. Result = %lf\n", sum(x, y));
     }
@@ -64,6 +60,9 @@ int main(void) {
     }
     else if (a == 4) {
         printf("Using sep. Result = %lf\n", sep(x, y));
+    }
+    else {
+        printf("Incorrect choice. Please try again by re-running program.");
     }
     return 0;
 }
