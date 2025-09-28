@@ -7,7 +7,7 @@
  * @param M Масса ложки (в килограммах)
  * @return возвращает функцию назад
  */
-double t(double c, double Q, double M);
+double t(const double c, double Q, double M);
 
 /**
  * @brief точка входа в программу
@@ -24,6 +24,6 @@ int main(void) {
     return 0;
 }
 
-double t(double c, double Q, double M) {
+double t(const double c, double Q, double M) {
     return Q / (c * M);
 }
