@@ -7,7 +7,7 @@
  * @param M Масса ложки (в килограммах)
  * @return возвращает функцию назад
  */
-double t(const double c, double Q, double M);
+double t(const double c, const double Q, const double M);
 
 /**
  * @brief точка входа в программу
@@ -15,8 +15,8 @@ double t(const double c, double Q, double M);
  */
 int main(void) {
     const double c = 500;
-    double m;
-    double Q;
+    double m = 0;
+    double Q = 0;
     printf("insert m(g) & Q(J)\n");
     scanf("%lf %lf", &m, &Q);
     double M = m * 0.001;
@@ -24,6 +24,6 @@ int main(void) {
     return 0;
 }
 
-double t(const double c, double Q, double M) {
+double t(const double c, const double Q, const double M) {
     return Q / (c * M);
 }
