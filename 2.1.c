@@ -1,4 +1,7 @@
+#include <float.h>
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 /**
  * @brief Рассчитывает функцию sum (сумма x и y) по заданным параметрам
@@ -6,7 +9,7 @@
  * @param y значение параметра x
  * @return возвращает функцию назад
  */
-double sum(double x, double y);
+double getSum(const double x, const double y);
 
 /**
  * @brief Рассчитывает функцию dif (разность x и y) по заданным параметрам
@@ -15,7 +18,7 @@ double sum(double x, double y);
  * @return возвращает функцию назад
  */
 
-double dif(double x, double y);
+double getDif(const double x, const double y);
 
 /**
  * @brief Рассчитывает функцию mult (произведение x и y) по заданным параметрам
@@ -24,7 +27,7 @@ double dif(double x, double y);
  * @return возвращает функцию назад
  */
 
-double mult(double x, double y);
+double getMult(const double x, const double y);
 
 /**
  * @brief Рассчитывает функцию sep (частное x и y) по заданным параметрам
@@ -33,7 +36,22 @@ double mult(double x, double y);
  * @return возвращает функцию назад
  */
 
-double sep(double x, double y);
+double getSep(const double x, const double y);
+
+/**
+ * @brief sum - сумма чисел
+ * @brief dif - разность чисел
+ * @brief mult - произведение чисел
+ * @brief sep - частное чисел
+ */
+
+enum {sum = 1, dif, mult, sep};
+
+/**
+ * @brief считывает значение, введённое с клавиатуры, и проверяет корректность ввода.
+ * @return возвращает функцию назад, если выполнена корректно, 3 - если функция экстренно завершена.
+ */
+double checkValue();
 
 /**
  * @brief точка входа в программу
@@ -41,44 +59,58 @@ double sep(double x, double y);
  */
 
 int main(void) {
-    int a;
-    double x;
-    double y;
+    int choice = 0;
     printf("Insert x and y (format:x y)\n");
-    scanf("%lf %lf", &x, &y);
-    printf("insert function number which you want to do (1-4):\n1 - sum\n2 - difference\n3 - multiplication\n4 - separation\n");
-    scanf("%d", &a);
-
-    if (a == 1) {
-        printf("Using sum. Result = %lf\n", sum(x, y));
-    }
-    else if (a == 2) {
-        printf("Using dif. Result = %lf\n", dif(x, y));
-    }
-    else if (a == 3) {
-        printf("Using mult. Result = %lf\n", mult(x, y));
-    }
-    else if (a == 4) {
-        printf("Using sep. Result = %lf\n", sep(x, y));
-    }
-    else {
-        printf("Incorrect choice. Please try again by re-running program.");
+    double x = checkValue();
+    double y = checkValue();
+    printf ("insert function number which you want to complete:\n%d - sum (x + y)\n%d - difference (x - y)\n%d - multiplication (x * y)\n%d - separation (x / y)\n", sum, dif, mult, sep);
+    scanf("%d", &choice);
+    switch (choice) {
+        case sum:
+            printf("Using sum. Result = %.2lf\n", getSum(x, y));
+            break;
+        case dif:
+            printf("Using dif. Result = %.2lf\n", getDif(x, y));
+            break;
+        case mult:
+            printf("Using mult. Result = %.2lf\n", getMult(x, y));
+            break;
+        case sep:
+            if (fabs(y) < DBL_EPSILON) {
+                printf("Y must not be 0.");
+            }
+            else {
+                printf("Using sep. Result = %.2lf\n", getSep(x, y));
+            }
+            break;
+        default:
+            printf("Incorrect answer. Restart program and try again.");
+            return 1;
     }
     return 0;
 }
 
-double sum(double x, double y) {
+double getSum(const double x, const double y) {
     return x + y;
 }
 
-double dif(double x, double y) {
+double getDif(const double x, const double y) {
     return x - y;
 }
 
-double mult(double x, double y) {
+double getMult(const double x, const double y) {
     return x * y;
 }
 
-double sep(double x, double y) {
+double getSep(const double x, const double y) {
     return x / y;
+}
+
+double checkValue() {
+    double value = 0;
+    if (!scanf("%lf", &value)) {
+        printf("Error.\n");
+        abort();
+    }
+    return value;
 }
