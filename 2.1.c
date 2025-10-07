@@ -60,7 +60,7 @@ double checkValue();
 
 int main(void) {
     int choice = 0;
-    printf("Insert x and y (format:x y)\n");
+    printf("Insert x and y (via Enter):\n");
     double x = checkValue();
     double y = checkValue();
     printf ("insert function number which you want to complete:\n%d - sum (x + y)\n%d - difference (x - y)\n%d - multiplication (x * y)\n%d - separation (x / y)\n", sum, dif, mult, sep);
