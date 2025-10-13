@@ -20,7 +20,7 @@ double func1(const double x);
  * @brief рассчитывает функцию 2 по заданным параметрам
  * @param x значение переменной x
  * @param a значение переменной y
- * @return
+ * @return возвращает функцию назад
  */
 double func2(const double x, const double a);
 
