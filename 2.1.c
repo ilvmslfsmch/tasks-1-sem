@@ -6,7 +6,7 @@
 /**
  * @brief Рассчитывает функцию sum (сумма x и y) по заданным параметрам
  * @param x значение параметра x
- * @param y значение параметра x
+ * @param y значение параметра y
  * @return возвращает функцию назад
  */
 double getSum(const double x, const double y);
@@ -14,7 +14,7 @@ double getSum(const double x, const double y);
 /**
  * @brief Рассчитывает функцию dif (разность x и y) по заданным параметрам
  * @param x значение параметра x
- * @param y значение параметра x
+ * @param y значение параметра y
  * @return возвращает функцию назад
  */
 
@@ -23,7 +23,7 @@ double getDif(const double x, const double y);
 /**
  * @brief Рассчитывает функцию mult (произведение x и y) по заданным параметрам
  * @param x значение параметра x
- * @param y значение параметра x
+ * @param y значение параметра y
  * @return возвращает функцию назад
  */
 
@@ -32,7 +32,7 @@ double getMult(const double x, const double y);
 /**
  * @brief Рассчитывает функцию sep (частное x и y) по заданным параметрам
  * @param x значение параметра x
- * @param y значение параметра x
+ * @param y значение параметра y
  * @return возвращает функцию назад
  */
 
