@@ -15,14 +15,14 @@ double getValue();
  * @param max максимальное значение промежутка
  * @return Возвращает 0, если минимальное значение меньше максимального, завершает программу - если больше или они равны.
  */
-double checkMinMax(const double min, const double max);
+void checkMinMax(const double min, const double max);
 
 /**
  * @brief Проверяет, что шаг функции больше нуля.
  * @param dx значение шага функции
  * @return Возвращает 0, если шаг функции больше нуля, завершает программу - если меньше нуля или равен ему.
  */
-double checkStep(const double dx);
+void checkStep(const double dx);
 
 /**
  * @brief Проверяет, принадлежит ли X области определения функции (x > 0)
@@ -62,20 +62,18 @@ int main(void) {
     return 0;
 }
 
-double checkMinMax(const double min, const double max) {
+void checkMinMax(const double min, const double max) {
     if (min > max || fabs(min - max) <= DBL_EPSILON) {
         printf("max must be more than min.");
         abort();
     }
-    return 0;
 }
 
-double checkStep(const double dx) {
+void checkStep(const double dx) {
     if (dx < DBL_EPSILON) {
         printf("Step must be more than 0");
         abort();
     }
-    return 0;
 }
 
 double getValue() {
