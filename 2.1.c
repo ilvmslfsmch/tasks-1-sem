@@ -11,15 +11,12 @@
  */
 double getSum(const double x, const double y);
 
-int checkChoice();
-
 /**
  * @brief Рассчитывает функцию dif (разность x и y) по заданным параметрам
  * @param x значение параметра x
  * @param y значение параметра y
  * @return возвращает функцию назад
  */
-
 double getDif(const double x, const double y);
 
 /**
@@ -28,7 +25,6 @@ double getDif(const double x, const double y);
  * @param y значение параметра y
  * @return возвращает функцию назад
  */
-
 double getMult(const double x, const double y);
 
 /**
@@ -37,7 +33,6 @@ double getMult(const double x, const double y);
  * @param y значение параметра y
  * @return возвращает функцию назад
  */
-
 double getSep(const double x, const double y);
 
 /**
@@ -46,7 +41,6 @@ double getSep(const double x, const double y);
  * @brief mult - произведение чисел
  * @brief sep - частное чисел
  */
-
 enum {sum = 1, dif, mult, sep};
 
 /**
@@ -56,10 +50,15 @@ enum {sum = 1, dif, mult, sep};
 double checkValue();
 
 /**
+ * @brief считывает значение, введённое с клавиатуры, и проверяет корректность ввода.
+ * @return возвращает функцию назад, если выполнена корректно, 3 - если функция экстренно завершена.
+ */
+int checkChoice();
+
+/**
  * @brief точка входа в программу
  * @return возвращает 0, если программа выполнена корректно; 1 - если некорректно
  */
-
 int main(void) {
     printf("Insert x and y (via Enter):\n");
     double x = checkValue();
