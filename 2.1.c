@@ -11,6 +11,8 @@
  */
 double getSum(const double x, const double y);
 
+int checkChoice();
+
 /**
  * @brief Рассчитывает функцию dif (разность x и y) по заданным параметрам
  * @param x значение параметра x
@@ -59,12 +61,11 @@ double checkValue();
  */
 
 int main(void) {
-    int choice = 0;
     printf("Insert x and y (via Enter):\n");
     double x = checkValue();
     double y = checkValue();
     printf ("insert function number which you want to complete:\n%d - sum (x + y)\n%d - difference (x - y)\n%d - multiplication (x * y)\n%d - separation (x / y)\n", sum, dif, mult, sep);
-    scanf("%d", &choice);
+    int choice = checkChoice();
     switch (choice) {
         case sum:
             printf("Using sum. Result = %.2lf\n", getSum(x, y));
@@ -113,4 +114,13 @@ double checkValue() {
         abort();
     }
     return value;
+}
+
+int checkChoice() {
+    int check = 0;
+    if (!scanf("%d", &check)) {
+        printf("Error.\n");
+        abort();
+    }
+    return check;
 }
