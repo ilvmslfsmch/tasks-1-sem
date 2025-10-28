@@ -78,10 +78,9 @@ int main(void) {
         case sep:
             if (fabs(y) < DBL_EPSILON) {
                 printf("Y must not be 0.");
+                return 1;
             }
-            else {
-                printf("Using sep. Result = %.2lf\n", getSep(x, y));
-            }
+            printf("Using sep. Result = %.2lf\n", getSep(x, y));
             break;
         default:
             printf("Incorrect answer. Restart program and try again.");
