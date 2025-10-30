@@ -34,7 +34,7 @@ int main(void) {
     double x = getValue();
     if (x - 1.4 <= DBL_EPSILON) {
         if (fabs(x) < DBL_EPSILON) {
-            printf("Idiot. x must not be = 0;");
+            printf("X must not be = 0;");
         }
         else {
             printf("y = %.3lf.", func1(x));
