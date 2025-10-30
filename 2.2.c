@@ -35,11 +35,10 @@ int main(void) {
     if (x - 1.4 <= DBL_EPSILON) {
         if (fabs(x) < DBL_EPSILON) {
             printf("X must not be = 0;");
+            return 1;
         }
-        else {
-            printf("y = %.3lf.", func1(x));
-        }
-        }
+        printf("y = %.3lf.", func1(x));
+    }
     else {
         printf("y = %.3lf", func2(x,a));
     }
