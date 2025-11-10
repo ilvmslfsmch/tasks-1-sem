@@ -6,13 +6,13 @@
  * @brief считывает целое значение с клавиатуры в проверкой ввода
  * @return возвращает считанное значение
  */
-int getValue();
+int getValue(void);
 
 /**
  * @brief считывает вещественное значение с клавиатуры в проверкой ввода
  * @return возвращает считанное значение
  */
-double getDouble();
+double getDouble(void);
 
 /**
  * @brief рассчитывает сумму n членов последовательности
@@ -46,7 +46,7 @@ void checkPositive(const double value);
  * @brief Точка входа в программу
  * @return 0, если программа выполнена корректно, иначе 1
  */
-int main()
+int main(void)
 {
     printf("Insert n:\n");
     int n = getValue();
@@ -62,9 +62,9 @@ int main()
 int getValue()
 {
     int value = 0;
-    if (!scanf("%d", &value))
-    {
-        printf("Error\n");
+    int result = scanf("%d", &value);
+    if (result != 1){
+        fprintf(stderr, "Input error");
         exit(1);
     }
     return value;
@@ -73,9 +73,9 @@ int getValue()
 double getDouble()
 {
     double value = 0;
-    if (!scanf("%lf", &value))
-    {
-        printf("Error\n");
+    double result = scanf("%lf", &value);
+    if (result != 1){
+        fprintf(stderr, "Input error");
         exit(1);
     }
     return value;
@@ -95,14 +95,14 @@ double getSumN(const int n)
 
 double getRecurent(const int i)
 {
-    return -1.0 / (i * i);;
+    return -1.0 / (i * i);
 }
 
 void checkPositive(const double value)
 {
-    if (!value > 0)
+    if (value < 0)
     {
-        printf("Error\n");
+        fprintf(stderr, "Input error.");
         exit(1);
     }
 }
