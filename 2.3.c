@@ -19,10 +19,14 @@ double halfSumm(const double x, const double y);
 
 /**
  * @brief считывает значение, введённое с клавиатуры, и проверяет корректность ввода.
- * @return возвращает функцию назад, если выполнена корректно, 3 - если некорректно
+ * @return возвращает функцию назад
  */
-double getValue();
+double getValue(void);
 
+/**
+ * @brief Точка входа в программу
+ * @return 0, если программа выполнена корректно, иначе 1
+ */
 int main(void) {
     printf("Input x:\n");
     double x = getValue();
@@ -45,14 +49,17 @@ int main(void) {
     return 0;
 }
 
-double getValue() {
+double getValue()
+{
     double value = 0;
-    if (!scanf("%lf", &value)) {
-        printf("Error.\n");
-        abort();
+    double result = scanf("%lf", &value);
+    if (result != 1){
+        fprintf(stderr, "Input error");
+        exit(1);
     }
     return value;
 }
+
 
 double halfSumm(const double x, const double y) {
     return (x + y) / 2;
