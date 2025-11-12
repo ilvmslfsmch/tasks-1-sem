@@ -174,8 +174,8 @@ void fillRandom(int* arr, const size_t size)
     int start = Value();
     printf("diapozon end:\n");
     int end = Value();
-    if (start > end) {
-        fprintf(stderr, "Error: start cannot be greater than end\n");
+    if (start >= end) {
+        fprintf(stderr, "Error: end must be more than start\n");
         exit(1);
     }
     for (size_t i = 0; i < size; i++)
