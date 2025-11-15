@@ -47,7 +47,7 @@ void fillRandom(int* arr, const size_t size);
  * @brief Создаёт копию массива
  * @param arr массив
  * @param size размер массива
- * @return
+ * @return полученный массив
  */
 int* copyArray(const int* arr, const size_t size);
 
