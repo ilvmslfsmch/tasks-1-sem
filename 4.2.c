@@ -174,12 +174,12 @@ int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size) {
     bool checkPositive = false;
     bool checkNegative = false;
     for (size_t i = 0; i < size; i++) {
-        if (copyArr[i] < 0) {
+        if (copyArr[i] < 0 && checkNegative != true) {
             firstNegative = copyArr[i];
             checkNegative = true;
             negativeIndex = i;
         }
-        if (copyArr[i] > 0) {
+        if (copyArr[i] > 0 && checkPositive != true) {
             firstPositive = copyArr[i];
             checkPositive = true;
         }
