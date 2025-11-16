@@ -38,21 +38,44 @@ void printArray(int* arr, const size_t size);
 void fillRandom(int* arr, const size_t size);
 
 /**
- * @brief Создаёт копию массива
+ * @brief Создаёт копию массива. Все дальнейшие изменения происходят в этом масссиве.
  * @param arr массив
  * @param size размер массива
- * @return
+ * @return полученный массив
  */
 int* copyArray(const int* arr, const size_t size);
 
-
+/**
+ * @brief Заменяет первый отрицательный элемент массива на первый положительный
+ * @param copyArr массив
+ * @param size размер массива
+ * @return 0, если положительный или отрицательный элементы отсутствуют, 1 - если замена выполнена успешно
+ */
 int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size);
 
-
+/**
+ * @brief Удаляет элементы массива, кратные семи и лежащие в диапазоне [min; max]
+ * @param copyArr массив
+ * @param size размер массива
+ * @return Возвращает 0, если неверно задан диапазон/отсутствуют отрицательные элементы/удалён весь массив, 1 - если функция выполнена успешно.
+ */
 int deleteDif7BelongsRange(int* copyArr, const size_t size);
 
+/**
+ * @brief Перемещает нулевые элементы в конец массива
+ * @param copyArr массив
+ * @param size размер массива
+ * @return изменённый массив
+ */
+int* replaceArray(int* copyArr, const size_t size);
 
-void fromDtoA(int* copyArr, const size_t size);
+/**
+ * @brief заменяет элементы массива по определённым в задании правилам
+ * @param copyArr массив
+ * @param size размер массива
+ * @return 0 - если в новом массиве отсутствуют элементы, 1 - если функция выполнена успешно
+ */
+int fromDtoA(int* copyArr, const size_t size);
 
 /**
  * @brief RANDOM - заполнение массива случайными числами в пределах введённого пользователем диапазона
@@ -192,7 +215,7 @@ int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size) {
         return 0;
     }
     if (firstNegative == 0) {
-        printf("No negative elements");
+        printf("No negative elements.\n");
         return 0;
     }
     copyArr[negativeIndex] = firstPositive;
@@ -214,30 +237,35 @@ int deleteDif7BelongsRange(int* copyArr, const size_t size) {
         printf("max must be more than min.\n");
         return 0;
     }
-    for (size_t i = 0; i < size;) {
-        if (copyArr[i] % 7 == 0 && min <= copyArr[i] && copyArr[i] <= max && copyArr[i] != 0) {
-            if (i + 1 == size) {
-                copyArr[i] = 0;
-            }
-            else {
-                for (size_t j = i; j < size - 1; j++) {
-                    copyArr[j] = copyArr[j+1];
-                }
-                copyArr[size] = 0;
+    int j = 0;
+    for (size_t i = 0; i < size; i++) {
+        if (copyArr[i] % 7 == 0 && min <= copyArr[i] && copyArr[i] <= max) {
+            copyArr[i] = 0;
+            j++;
+        }
+    }
+    if (j == 0) {
+        printf("There are no such elements you need in this range. Your new array equals old array.\n");
+        return 1;
+    }
+    if (j == size) {
+        printf("All of the elements are deleted.\n");
+        return 1;
+    }
+    replaceArray(copyArr, size);
+    printf("Your new array is:\n");
+    for (size_t k = 0; k < size; k++) {
+        if (copyArr[k] != 0) {
+            printf("%d ", copyArr[k]);
             }
         }
-        else i++;
-    }
-    printf("New array:\n");
-    for (size_t j = 0; j < size; j++) {
-        printf("%d ", copyArr[j]);
-    }
     printf("\n");
     return 1;
 }
 
-void fromDtoA(int* copyArr, const size_t size) {
+int fromDtoA(int* copyArr, const size_t size) {
     printf("Forming array A:\n");
+    int k = 0;
     for (size_t i = 0; i < size; i++) {
         if (copyArr[i] != 0) {
             if (i % 2 == 0) {
@@ -246,33 +274,32 @@ void fromDtoA(int* copyArr, const size_t size) {
             else {
                 copyArr[i] = copyArr[i] * i;
             }
+            k++;
+        }
+        if (k == 0){
+            printf("There are no elements in new array.");
+            return 0;
         }
     }
     for (size_t j = 0; j < size; j++) {
-        printf("%d ", copyArr[j]);
+        if (copyArr[j] != 0) {
+            printf("%d ", copyArr[j]);
+        }
     }
     printf("\n");
+    return 1;
 }
 
-/*    for (size_t i = 0; i < size;) {
-if (copyArr[i] % 7 == 0 && min <= copyArr[i] && copyArr[i] <= max && copyArr[i] != 0) {
-    if (i + 1 == size) {
-        copyArr[i] = 0;
-    }
-    else {
-        for (size_t j = i; j < size - 1; j++) {
-            copyArr[j] = copyArr[j+1];
+int* replaceArray(int* copyArr, const size_t size) {
+    int NoZero = 0;
+    for (size_t i = 0; i < size; i++) {
+        if (copyArr[i] != 0) {
+            copyArr[NoZero] = copyArr[i];
+            NoZero++;
         }
-        copyArr[size] = 0;
     }
-}
-else i++;
+    for (size_t j = NoZero; j < size; j++) {
+        copyArr[j] = 0;
     }
-printf("New array:\n");
-for (size_t j = 0; j < size; j++) {
-    printf("%d ", copyArr[j]);
+    return copyArr;
 }
-printf("\n");
-return 1;
-}
-*/
