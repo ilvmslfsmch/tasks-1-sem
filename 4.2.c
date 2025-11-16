@@ -253,11 +253,11 @@ int deleteDif7BelongsRange(int* copyArr, const size_t size) {
     }
     if (j == 0) {
         printf("There are no such elements you need in this range. Your new array equals old array.\n");
-        return 1;
+        return 0;
     }
     if (j == size) {
         printf("All of the elements are deleted.\n");
-        return 1;
+        return 0;
     }
     replaceArray(copyArr, size);
     printf("Your new array is:\n");
