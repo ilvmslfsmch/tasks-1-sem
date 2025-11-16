@@ -182,6 +182,11 @@ void fillRandom(int* arr, const size_t size)
 int* copyArray(const int* arr, const size_t size)
 {
     int* copyArr = malloc(sizeof(int)*size);
+    if (arr == NULL)
+    {
+        fprintf(stderr,"Error");
+        exit(1);
+    }
     for (size_t i = 0; i<size; i++)
     {
         copyArr[i] = arr[i];
