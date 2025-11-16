@@ -58,7 +58,14 @@ int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size);
  * @brief Удаляет элементы массива, кратные семи и лежащие в диапазоне [min; max]
  * @param copyArr массив
  * @param size размер массива
- * @return Возвращает 0, если неверно задан диапазон/отсутствуют отрицательные элементы/удалён весь массив, 1 - если функция выполнена успешно.
+ * @return Возвращает 0, если неверно задан диапазон/отсутствуют отрицательные элементы/удалён весь массив,
+ * 1 - если функция выполнена успешно.
+ * @note Фактически функция заменяет все подходящие числа на нули и переставляет их в конец массива (нули также кратны семи).
+ * Для перестановки нулей в конец массива используется функция replaceArray.
+ * Дальнейшая работа происходит только с ненулевыми элементами.
+ * Таким образом, создаётся видимость, что элементы в массиве удалились, ибо элементы массива нельзя удалить.
+ * @note также вводится счётчик j, который сделан для определения, есть ли в массиве подходящие элементы и
+ * не состоит ли массив целиком из таких элементов (и, как следствие, не удалится ли он полностью).
  */
 int deleteDif7BelongsRange(int* copyArr, const size_t size);
 
@@ -67,6 +74,12 @@ int deleteDif7BelongsRange(int* copyArr, const size_t size);
  * @param copyArr массив
  * @param size размер массива
  * @return изменённый массив
+ * @note Создаётся нулевой индекс NoZero. Нулевые элементы изначально не трогаются, затем ненулевые заменяются на
+ * нетронутые нулевые по индексу NoZero.
+ * После того, как все необходимые элементы заменены, нулевые элементы просто проставляются в конец массива
+ * в соответствии с текущим индексом. Надеюсь, благодаря этой ремарке функция и ход моих мыслей станут яснее =)
+ * @note P.S. на самом деле, если разобраться, то всё очень понятно и логично, но объясняю я плоховато, плюс те, кто видел,
+ * всегда задавали вопросы, потому я решил попробовать объяснить хоть как-то.
  */
 int* replaceArray(int* copyArr, const size_t size);
 
@@ -115,8 +128,11 @@ int main(void)
     printArray(arr, size);
     int* copyArr = copyArray(arr, size);
     replaceFirstNegativeFirstPositive(copyArr, size);
+    printf("\n");
     deleteDif7BelongsRange(copyArr, size);
+    printf("\n");
     fromDtoA(copyArr, size);
+    printf("\n");
     free(copyArr);
     free(arr);
     return 0;
@@ -201,19 +217,19 @@ int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size) {
     int firstPositive = 0;
     int firstNegative = 0;
     size_t negativeIndex = 0;
-    bool checkPositive = false;
-    bool checkNegative = false;
+    bool checkPositive = false; // булы для проверки на то, нашлось ли положительное/отрицательное число
+    bool checkNegative = false; 
     for (size_t i = 0; i < size; i++) {
-        if (copyArr[i] < 0 && checkNegative != true) {
+        if (copyArr[i] < 0 && checkNegative != true) { //если отрицательное нашлось, мы больше ничего с положительными числами не меняем
             firstNegative = copyArr[i];
             checkNegative = true;
             negativeIndex = i;
         }
-        if (copyArr[i] > 0 && checkPositive != true) {
+        if (copyArr[i] > 0 && checkPositive != true) { //аналогично для положительного
             firstPositive = copyArr[i];
             checkPositive = true;
         }
-        if (checkPositive == true && checkNegative == true) {
+        if (checkPositive == true && checkNegative == true) { //досрочный выход из цикла, если оба числа найдены
             break;
         }
     }
@@ -230,7 +246,6 @@ int replaceFirstNegativeFirstPositive(int* copyArr, const size_t size) {
     for (size_t j = 0; j < size; j++) {
         printf("%d ", copyArr[j]);
     }
-    printf("\n");
     return 1;
 }
 
@@ -253,11 +268,11 @@ int deleteDif7BelongsRange(int* copyArr, const size_t size) {
     }
     if (j == 0) {
         printf("There are no such elements you need in this range. Your new array equals old array.\n");
-        return 0;
+        return 1;
     }
     if (j == size) {
         printf("All of the elements are deleted.\n");
-        return 0;
+        return 1;
     }
     replaceArray(copyArr, size);
     printf("Your new array is:\n");
@@ -266,7 +281,6 @@ int deleteDif7BelongsRange(int* copyArr, const size_t size) {
             printf("%d ", copyArr[k]);
             }
         }
-    printf("\n");
     return 1;
 }
 
@@ -293,7 +307,6 @@ int fromDtoA(int* copyArr, const size_t size) {
             printf("%d ", copyArr[j]);
         }
     }
-    printf("\n");
     return 1;
 }
 
