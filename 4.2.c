@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #define scanf_s scanf
 
 /**
@@ -173,6 +174,7 @@ void fillRandom(int* arr, const size_t size)
         fprintf(stderr, "Error: start cannot be greater than end\n");
         exit(1);
     }
+    srand(time(NULL));
     for (size_t i = 0; i < size; i++)
     {
         arr[i] = rand() % (end - start + 1) + start;
