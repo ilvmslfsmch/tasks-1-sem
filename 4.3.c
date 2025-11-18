@@ -223,9 +223,9 @@ void freeArray(int** arr, const size_t rows)
 }
 
 
-void checkRange(const int min, const int end)
+void checkRange(const int min, const int max)
 {
-    if(min > end)
+    if(min > max)
     {
         printf("Error\n");
         exit(1);
