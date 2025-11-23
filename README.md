@@ -1,2 +1,4 @@
-# This rep belongs to Martini Persey from TKI-141
-## Done 12/12 issues from task 1 (4th variant)
+# Сделано и оформлено: Мартини Персей, ТКИ-141
+## Выполнено: 12/12 заданий. Задания взяты из репозитория [Tasks1](https://github.com/BalakinaEP/Tasks1) Балакиной Е.П. Вариант - 4.
+### Ниже представлены все ссылки на задания и отчёты.
+
