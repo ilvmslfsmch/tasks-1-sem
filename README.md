@@ -6,3 +6,5 @@
 [Текст задания 1.1, вариант 4](https://github.com/BalakinaEP/Tasks1/issues/1)
 
 [Код задания 1.1](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/1.1.c)
+
+[Одобренный pull-request (одобрен Яневом Ж. и Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/pull/4)
