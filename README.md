@@ -11,7 +11,14 @@ P.P.S. Отчёты (и коды), проверенные одним препо�
 
 [Код задания 1.1](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/1.1.c)
 
-[Одобренный pull-request (одобрен Яневом Ж. и Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/pull/4)
+Pull-request одобрили Балакина Е.П. и Янев Ж.
 
 [Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/27)
 ### Task 1.2
+[Текст задания 1.2. Вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/7)
+
+[Код задания 1.2](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/1.2.c)
+
+Pull-request одобрил Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/28)
