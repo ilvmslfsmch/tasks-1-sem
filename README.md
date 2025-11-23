@@ -9,4 +9,4 @@
 
 [Одобренный pull-request (одобрен Яневом Ж. и Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/pull/4)
 
-[Одобренный отчёт (одобрен Балакиной Е.П.]()
+[Одобренный отчёт (одобрен Балакиной Е.П.](https://github.com/ilvmslfsmch/tasks-1-sem/issues/27)
