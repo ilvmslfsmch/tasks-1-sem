@@ -57,11 +57,11 @@ Pull-request одобрили Балакина Е.П. и Янев Ж.
 ### Task 3.1.
 [Текст задания 3.1, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/14)
 
-[Код задания 3.1](https://github.com/ilvmslfsmch/tasks-1-sem/issues/33)
+[Код задания 3.1](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/3.1.c)
 
 Pull-request одобрили Балакина Е.П. и Янев Ж.
 
-[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/27)
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/33)
 ### Task 3.2.
 [Текст задания 3.2, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/17)
 
