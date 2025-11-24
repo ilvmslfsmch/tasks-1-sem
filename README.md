@@ -22,3 +22,83 @@ Pull-request одобрили Балакина Е.П. и Янев Ж.
 Pull-request одобрил Янев Ж.
 
 [Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/28)
+### Task 1.3.
+[Текст задания 1.3., вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/9)
+
+[Код задания 1.3.](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/1.3.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/29)
+### Task 2.1.
+[Текст задания 2.1, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/5)
+
+[Код задания 2.1](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/2.1.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/30)
+### Task 2.2.
+[Текст задания 2.2, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/12)
+
+[Код задания 2.2](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/2.2.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/31)
+### Task 2.3.
+[Текст задания 2.3, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/15)
+
+[Код задания 2.3](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/2.3.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/32)
+### Task 3.1.
+[Текст задания 3.1, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/14)
+
+[Код задания 3.1](https://github.com/ilvmslfsmch/tasks-1-sem/issues/33)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/27)
+### Task 3.2.
+[Текст задания 3.2, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/17)
+
+[Код задания 3.2](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/3.2.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/34)
+### Task 3.3.
+[Текст задания 3.3, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/19)
+
+[Код задания 3.3](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/3.3.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/35)
+### Task 4.1.
+[Текст задания 4.1, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/21)
+
+[Код задания 4.1](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/4.1.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/36)
+### Task 4.2.
+[Текст задания 4.2, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/23)
+
+[Код задания 4.2](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/4.2.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/37)
+### Task 4.3.
+[Текст задания 4.3, вариант 4](https://github.com/ilvmslfsmch/tasks-1-sem/issues/24)
+
+[Код задания 4.3](https://github.com/ilvmslfsmch/tasks-1-sem/blob/main/4.3.c)
+
+Pull-request одобрили Балакина Е.П. и Янев Ж.
+
+[Одобренный отчёт (одобрен Балакиной Е.П.)](https://github.com/ilvmslfsmch/tasks-1-sem/issues/38)
